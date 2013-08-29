@@ -6,7 +6,7 @@ about:
     sort_info: 25 
     title: About Rock
 
-installation.page:
+install:
     sort_info: 50
     title: Installation
 

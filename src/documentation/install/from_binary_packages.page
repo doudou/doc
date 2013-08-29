@@ -1,0 +1,46 @@
+---
+title: Using Binary Packages
+sort_info: 20
+---
+
+Rock's software is available as prebuilt binary packages for the following
+operating systems:
+
+ - [Ubuntu](#ubuntu) 12.04 and 13.04 on x86 and x86_64
+
+=== Using Ubuntu Packages
+
+In order to install the Ubuntu packages, you will have to add the source entry.
+It will track the 'stable' flavor of Rock. In order to get the packages for next
+and/or master, replace 'stable' by 'next' or 'master' in the URL.
+
+For 12.04:
+
+~~~
+wget http://rock-robotics.org/stable/documentation/install/ubuntu-12.04.list
+cp cp ubuntu-12.04.list /etc/apt/sources.list.d
+~~~
+
+For 13.04
+
+~~~
+wget http://rock-robotics.org/stable/documentation/install/ubuntu-13.04.list
+cp cp ubuntu-13.04.list /etc/apt/sources.list.d
+~~~
+
+Then, run
+
+~~~
+sudo apt-get update
+~~~
+
+The packages can be used in two ways:
+
+ - if you wish to use binary packages for all software that is packaged, install
+   either the rock-osdeps or the osdeps package for the package set you wish to
+   select (e.g. rock-toolchain-osdeps would pick binary packages for rock.base
+   and rock.toolchain).
+ - if you wish to use binary packages only for a few packages, install them
+   separately. The naming scheme is rock-packagename, e.g. rock-tools-syskit for
+   tools/syskit
+

@@ -1,0 +1,113 @@
+---
+title: Installation
+sort_info: 0
+---
+
+Level of support
+----------------
+This section lists the operating systems where Rock is _well tested_, is _untested_ and whose status is _unknown_.
+For _well tested_ operating systems, a build server makes sure that Rock builds
+fine, and it is known to be actively used. _Untested_ operating systems have
+had users (so, it did work at some point), but it is unknown whether it is
+still being actively used. Finally, _unknown status_ operating systems are OSes where
+Rock should work, but we have had no known report of its success or failure.
+
+### OSes with binary packages
+
+| ![Ubuntu](install/ubuntu.png) | Since 12.04, binary packages on x86 and x86_64 |
+
+### Well-tested OSes
+
+| ![Debian](install/debian.png) | testing or unstable |
+
+### Untested OSes
+
+| ![Gentoo](install/gentoo.jpg) | Last known working version end of 2011 |
+| ![Arch](install/arch.png) | Last known working version end of 2010 |
+
+### Status for other 
+
+| Other Linux distributions | Should work fine. No automatic installation of
+binary packages. |
+| Mac OSX | Known to have problems. No automatic installation of binary packages. |
+
+Installing Rock
+---------------
+The easiest way is to install Rock using [binary
+packages](from_binary_packages.html) if you are using Ubuntu on x86 or x86_64.
+Otherwise, you will have to [build from source](from_source.html).
+
+
+Creating a new Rock-using project
+---------------------------------
+While the binary packages allow you to install the Rock software easily, what
+you usually want to do is start developing some _other_ software that uses Rock.
+
+The recommended way to achieve this is to bootstrap a new autoproj installation.
+This installation will allow you to use the binary packages when available, and
+will manage your own packages (import, install, build)
+
+ 1. Make sure that the Ruby interpreter is installed on your machine. Rock
+    requires ruby 1.9.2 or higher, which on Debian and Ubuntu are provided by
+    the ruby1.9.1 package.
+
+    ruby --version
+    {: .commandline}
+
+ 2. Create and "cd" into the directory in which you want to create your project
+ 3. Use this [bootstrap.sh](http://gitorious.org/rock/buildconf_template/blobs/raw/master/bootstrap.sh)
+    script. Save it in the folder you just created.
+
+ 4. In a console, run
+    
+    sh bootstrap.sh
+    {: .commandline}
+
+ 5. Important: as the build tool tells you, you **must** load the generated env.sh script at the end of the build !!!
+    * source it in your current console
+
+      . ./env.sh
+      {: .commandline}
+
+    * but also add it to your .bashrc: append the following line at the end of
+      $HOME/.bashrc
+    
+      . /path/to/the/directory/env.sh
+      {: .commandline}
+
+You should consider reading [the autoproj guide for basic
+usage](/documentation/autoproj/basic_usage.html) to know the basic operations of
+the build system. More bootstrapping documentation is also available [at the
+same place](/documentation/autoproj/bootstrap.html)
+
+The autoproj/ folder created during this bootstrap tells autoproj what needs to
+be installed and built. It is, after the bootstrap, a git repository. It is also
+configured to point to Rock's buildconf template.
+
+We advise you to create a git repository on any git-based hosting (privately on
+your own servers using e.g. gitorious or gitosis, publicly using github,
+gitorious or other services of this kind). 'buildconf' is the common name for
+this particular repository. Once this repository is created, push
+the initial state to it with the following (assuming that 'username' is the
+username under which the new repository has been created)
+
+~~~
+cd autoproj
+git push git@github.com:username/buildconf.git HEAD:master
+~~~
+
+You must then switch autoproj to this particular configuration with
+
+~~~
+acd
+autoproj switch-config git git@github.com:username/buildconf.git branch=master
+~~~
+
+Finally, you or other people can then replicate this installation by
+bootstrapping this particular build configuration in a newly created folder:
+
+~~~
+curl http://rock-robotics.org/autoproj_bootstrap
+ruby1.9.1 autoproj_bootstrap git git@github.com:username/buildconf.git
+~~~
+

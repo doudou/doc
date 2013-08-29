@@ -6,32 +6,8 @@ sort_info: 50
 This page explains how to install Rock and where to look for more
 information (tutorials, ...)
 
-Level of support
-----------------
-This section lists the operating systems where Rock is _well tested_, is _untested_ and whose status is _unknown_.
-For _well tested_ operating systems, a build server makes sure that Rock builds
-fine, and it is known to be actively used. _Untested_ operating systems have
-had users (so, it did work at some point), but it is unknown whether it is
-still being actively used. Finally, _unknown status_ operating systems are OSes where
-Rock should work, but we have had no known report of its success or failure.
-
-### Well tested Oses
-
-| ![Ubuntu](install/ubuntu.png) | Since 10.04 |
-| ![Debian](install/debian.png) | testing or unstable |
-
-### Untested OSes
-
-| ![Gentoo](install/gentoo.jpg) | Last known working version end of 2011 |
-| ![Arch](install/arch.png) | Last known working version end of 2010 |
-
-### Status for other 
-
-| Other Linux distributions | Should work fine. No osdeps. |
-| Mac OSX | Known to have problems. No osdeps. |
-
-Installation: the easy way
---------------------------
+Installation from source - step by step
+---------------------------------------
 
  1. Make sure that the Ruby interpreter is installed on your machine. Rock
     requires ruby 1.9.2 or higher, which on Debian and Ubuntu are provided by

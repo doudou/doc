@@ -1,6 +1,6 @@
+require 'jekyll/generators/pagination'
 module Jekyll
-
-  class Pagination < Generator
+  class Generators::Pagination < Generator
     # This generator is safe from arbitrary code execution.
     safe true
 

@@ -1,0 +1,20 @@
+\--- !omap
+- news/index.html:
+    in_menu: true
+    sort_info: 500
+    url: /news/index.html
+    title: News
+- api/:
+    in_menu: false
+    sort_info: 99999
+    url: /api
+
+- api/autoproj/index.html:
+    in_menu: false
+    sort_info: 99999
+    url: /api/autoproj/index.html
+- api/autobuild/index.html:
+    in_menu: false
+    sort_info: 99999
+    url: /api/autoproj/index.html
+

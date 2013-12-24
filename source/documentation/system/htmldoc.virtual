@@ -1,0 +1,19 @@
+\--- !omap
+- syskit.html:
+    in_menu: true
+    routed_title: Syskit API
+    sort_info: 99997
+    url: /api/tools/syskit
+
+- roby_guide.html:
+    in_menu: true
+    routed_title: Roby User's Guide
+    sort_info: 99998
+    url: /api/tools/roby/index.html
+
+- roby_api.html:
+    routed_title: Roby API
+    in_menu: false
+    sort_info: 99999
+    url: /api/tools/roby/api/Roby.html
+

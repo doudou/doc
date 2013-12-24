@@ -1,0 +1,28 @@
+<package>
+  <description brief="one line of text">
+    long description goes here, 
+    <em>XHTML is allowed</em>
+  </description>
+  <author>Alice/alice@somewhere.bar, Bob/bob@nowhere.foo</author>
+  <license>BSD</license>
+  <url>http://rock-robotics.org</url>
+  <logo>http://rock-robotics.org</logo>
+
+  <!-- add dependency on either another
+       autoproj-built package, or a
+       package from the operating system -->
+  <depend package="pkgname"/>
+  <depend package="common"/>
+  <!-- add an optional dependency. Optional
+       dependencies will be ignored if unknown or
+       disabled in autoproj/manifest -->
+  <depend package="common" optional="1"/>
+  <!-- add dependency on a prepackaged operating
+       system package. Use for compatibility with
+       ROSbuild, autoproj does not need that -->
+  <rosdep name="python" />
+  <!-- add tags to the package. Used for documentation
+       generation -->
+  <tags>tag1,tag2</tags>
+  <tags>tag3</tags>
+</package>

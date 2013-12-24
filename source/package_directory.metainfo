@@ -1,0 +1,19 @@
+package_directory.page:
+    template: /package_directory.template
+tasks/**/*:
+    template: /package_directory.template
+    in_menu: false
+types/**/*:
+    template: /package_directory.template
+    in_menu: false
+pkg/**/*:
+    template: /package_directory.template
+    in_menu: false
+sets/**/*:
+    template: /package_directory.template
+    in_menu: false
+osdeps/**/*:
+    template: /package_directory.template
+    in_menu: false
+status*:
+    template: /package_directory.template

@@ -1,0 +1,17 @@
+\--- !omap
+- cheat_sheet.html:
+    title: "Cheat Sheet (PDF)"
+    routed_title: "Cheat Sheet (PDF)"
+    in_menu: true
+    sort_info: 20
+    url: orogen_cheat_sheet.pdf
+
+- api/:
+    in_menu: true
+
+- api/index.html:
+    routed_title: API
+    in_menu: false
+    sort_info: 99999
+    url: /api/orogen/index.html
+

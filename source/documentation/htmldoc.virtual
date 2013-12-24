@@ -1,0 +1,7 @@
+\--- !omap
+- package_api.html:
+    in_menu: true
+    sort_info: 70
+    url: /pkg
+    title: Packages API
+

@@ -1,0 +1,83 @@
+index.page:
+    sort_info: 0
+    routed_title: /
+
+about:
+    sort_info: 25 
+    title: About Rock
+
+installation.page:
+    sort_info: 50
+    title: Installation
+
+packages:
+    sort_info: 60
+    title: Managing Packages
+
+contributing:
+    sort_info: 65 
+    title: Contributing
+
+tutorials:
+    sort_info: 80
+    title: Basics
+
+advanced_tutorials:
+    sort_info: 83
+    title: Advanced
+
+system_management_tutorials:
+    sort_info: 85
+    title: System Management
+
+additional_tutorials:
+    sort_info: 90
+    title: Additional Functionality
+
+autoproj:
+    title: Build System
+    sort_info: 110
+
+orogen:
+    title: Developing Components
+    sort_info: 150
+
+runtime:
+    title: Running Components
+    sort_info: 200
+
+system:
+    title: Running Complex Systems
+    sort_info: 220
+
+data_analysis:
+    title: Data Analysis
+    sort_info: 250
+
+graphical_user_interface:
+    title: Graphical User Interface
+    sort_info: 300
+
+package_directory:
+    title: Package Directory
+    sort_info: 500
+
+data_processing:
+    title: Data Processing
+    sort_info: 1010
+
+device_drivers:
+    title: Device Drivers
+    sort_info: 1050
+
+envire:
+    title: Envire 
+    sort_info: 1100
+
+debugging:
+    title: Debugging Techniques
+    sort_info: 1200
+
+ros:
+    title: ROS/Rock bridge
+    sort_info: 1300

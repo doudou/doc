@@ -31,7 +31,10 @@ module Jekyll
       end
 
       rtn = ''
-      (context.environments.first['site'][@array_name] || []).each do |file|
+      value = context.registers[:page][@array_name] ||
+          context.registers[:site].config[@array_name] ||
+          Array.new
+      value.each do |file|
         if file !~ /^[a-zA-Z0-9_\/\.-]+$/ || file =~ /\.\// || file =~ /\/\./
           rtn = rtn + "Include file '#{file}' contains invalid characters or sequences"
         end

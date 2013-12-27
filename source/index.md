@@ -1,6 +1,6 @@
 ---
 title: "Rock: the Robot Construction Kit"
-layout: index
+header: false
 ---
 
 <h1>What is Rock ?</h1>

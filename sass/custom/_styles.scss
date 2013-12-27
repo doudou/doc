@@ -39,6 +39,33 @@ article {
       word-wrap: inherit;
   }
 }
+
+.textbox {
+    margin: 0px;
+    padding: 7px 10px 5px 10px;
+}
+.cmdline, .commandline {
+    padding:5px;
+    background:#e4e4ff;
+    color:#222;
+    border:2px solid #ddd;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
+    font-family: monospace;
+}
+.note {
+    @extend .textbox;
+    background-color: rgb(219, 230, 241);
+    @include shadow-box;
+}
+.warning {
+    @extend .textbox;
+    background-color: rgb(255,210,210);
+    @include shadow-box;
+}
+
 $table-header-background: rgb(219, 230, 241);
 
 table {

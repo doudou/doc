@@ -39,3 +39,24 @@ article {
       word-wrap: inherit;
   }
 }
+$table-header-background: rgb(219, 230, 241);
+
+table {
+    @media only screen and (min-width: 480px) {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+th {
+    border-top: solid thin darken($table-header-background, 20%);
+    border-bottom: solid thin darken($table-header-background, 20%);
+    background-color: $table-header-background;
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+td {
+    padding: .3em;
+}
+

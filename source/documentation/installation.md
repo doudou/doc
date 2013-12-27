@@ -16,20 +16,31 @@ had users (so, it did work at some point), but it is unknown whether it is
 still being actively used. Finally, _unknown status_ operating systems are OSes where
 Rock should work, but we have had no known report of its success or failure.
 
-### Well tested Oses
+<table>
+<tr><th colspan="2">Supported Operating Systems</th></tr>
+<tr><td>{% img install/ubuntu.png Ubuntu %}</td>
+    <td>All versions since the latest LTS. Support is dropped for the
+        one-before-last LTS one year after the current
+        LTS release. Support for new releases usually takes up to 3 months</td>
+</tr>
 
-| ![Ubuntu](install/ubuntu.png) | Since 10.04 |
-| ![Debian](install/debian.png) | testing or unstable |
+<tr><th colspan="2">Known to work</th></tr>
+<tr><td>{% img install/gentoo.png Ubuntu %}</td>
+    <td>Last known working version end of 2011</td>
+</tr>
+<tr><td>{% img install/arch.png Ubuntu %}</td>
+    <td>Last known working version end of 2013</td>
+</tr>
 
-### Untested OSes
-
-| ![Gentoo](install/gentoo.jpg) | Last known working version end of 2011 |
-| ![Arch](install/arch.png) | Last known working version end of 2010 |
-
-### Status for other 
-
-| Other Linux distributions | Should work fine. No osdeps. |
-| Mac OSX | Known to have problems. No osdeps. |
+<tr><th colspan="2">Other</th></tr>
+<tr><td>Other Linux distributions</td>
+    <td>Should work fine, but there is no osdep support (required distribution
+        packages will have to be installed manually)</td>
+</tr>
+<tr><td>MacOSX</td>
+    <td>Borderline (i.e. "kind of works sometimes")</td>
+</tr>
+</table>
 
 Installation: the easy way
 --------------------------

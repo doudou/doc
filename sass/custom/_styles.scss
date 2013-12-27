@@ -5,6 +5,14 @@
 body {
     font-family: $sans;
 }
+article header {
+    padding-top: 0;
+}
+h1 {
+    font-size: 1.8em;
+    color: rgb(88,144,168);
+}
+
 aside.sidebar section {
     line-height: 1em;
     a {

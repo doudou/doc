@@ -1,2 +1,18 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+aside.sidebar section {
+    line-height: 1em;
+    a {
+        @include hover-link
+    }
+    h1 {
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    h2 {
+        color: rgb(88,144,168);
+        font-weight: normal;
+        margin-top: 1em;
+        margin-bottom: 0.25em;
+    }
+}

@@ -66,6 +66,9 @@ module Rock
         end
 
         # Tag to generate the path to the API of a given package
+        #
+        # @example
+        #   {% yard my/package The::Name::Of::A::Class %}
         class Yard < API
             attr_reader :class_name
             def initialize(tag_name, text, tokens)

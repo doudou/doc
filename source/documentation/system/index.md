@@ -62,9 +62,11 @@ a class or module (depending of what kind of thing this model describes), and an
 instance of a model is an object of the corresponding class.
 
 For instance, the Roby model that represents a xsens_imu::Task task context is a
-XsensImu::Task class, which is a subclass of Syskit::TaskContext. The list of
-ports defined on all xsens_imu::Task task contexts can then be obtained with
-XsensImu::Task.each_input_port for instance.  At runtime, running
+XsensImu::Task class, which is a subclass of the [Syskit::TaskContext class]({% yard tools/syskit
+Syskit::TaskContext %}). The list of
+ports defined on all xsens_imu::Task task contexts can then be obtained for
+instance with [XsensImu::Task.each_input_port]({% yard tools/syskit
+Syskit::TaskContext#each_input_port %}) for instance. At runtime, running
 xsens_imu::Task task contexts are then represented by objects of class
 XsensImu::Task, i.e. running_xsens_imu_task.class == XsensImu::Task.
 

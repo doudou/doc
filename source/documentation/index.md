@@ -13,9 +13,7 @@ documentation, got to the [package list](/pkg)
 Development Workflow
 --------------------
 
-<div class="fullwidth_video_400">
-{% youtube UkZYiw7crbw 400 290 %}
-</div>
+{% youtube UkZYiw7crbw %}
 
 First and foremost, development in Rock always starts with __[creating a
 library](tutorials/100_basics_create_library.html)__. As a guideline, this
@@ -34,9 +32,7 @@ the process, from a library to running network of components.
 
 Data Analysis
 -------------
-<div class="fullwidth_video_400">
-{% youtube PhHFzCNvjlQ 400 290 %}
-</div>
+{% youtube PhHFzCNvjlQ %}
 
 At this point, Rock offers extended support for runtime as well as offline data
 analysis. [Logging](data_analysis/index.html) is an integral part of the
@@ -54,7 +50,5 @@ layer](system/index.html) which will allow you to manage complex networks of
 components both at design and running time. Have a look first at the
 [corresponding tutorials](system_management_tutorials).
 
-<div class="fullwidth_video_400">
-{% youtube QKl_0pGIfqI 400 300 %}
-</div>
+{% youtube QKl_0pGIfqI %}
 

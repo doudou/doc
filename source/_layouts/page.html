@@ -35,7 +35,9 @@ layout: default
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
-  {% if site.page_asides.size %}
+  {% if page.asides %}
+    {% include_array asides %}
+  {% elsif site.page_asides %}
     {% include_array page_asides %}
   {% else %}
     {% include_array default_asides %}

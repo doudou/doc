@@ -18,14 +18,14 @@ For 12.04:
 
 ~~~
 wget http://rock-robotics.org/stable/documentation/install/ubuntu-12.04.list
-cp cp ubuntu-12.04.list /etc/apt/sources.list.d
+sudo cp ubuntu-12.04.list /etc/apt/sources.list.d
 ~~~
 
 For 13.04
 
 ~~~
 wget http://rock-robotics.org/stable/documentation/install/ubuntu-13.04.list
-cp cp ubuntu-13.04.list /etc/apt/sources.list.d
+sudo cp ubuntu-13.04.list /etc/apt/sources.list.d
 ~~~
 
 Then, run
@@ -34,13 +34,50 @@ Then, run
 sudo apt-get update
 ~~~
 
-The packages can be used in two ways:
+There are three level of granularity when using prebuilt packages.
 
- - if you wish to use binary packages for all software that is packaged, install
-   either the rock-osdeps or the osdeps package for the package set you wish to
-   select (e.g. rock-toolchain-osdeps would pick binary packages for rock.base
-   and rock.toolchain).
- - if you wish to use binary packages only for a few packages, install them
-   separately. The naming scheme is rock-packagename, e.g. rock-tools-syskit for
-   tools/syskit
+You can use binary packages **for all packages that have one**. This is done by
+installing the rock-osdeps binary package after you added the proper
+source entry above, i.e. run
+
+~~~
+sudo apt-get install rock-osdeps
+~~~
+
+You can use binary packages **for all packages of a package set and their
+dependencies**. This is done by installing the rock-_package set name_-osdeps
+package. For instance, to get the prebuilt toolchain, but compile the libraries yourself, do
+
+~~~
+sudo apt-get install rock-toolchain-osdeps rock-base-osdeps
+~~~
+
+Finally, you can use binary packages for a given package and its dependencies.
+This is done by installing the corresponding rock-_package name_ package. For
+instance, to install the drivers/gps package as prebuilt package, one would do
+
+~~~
+sudo apt-get install rock-drivers-gps
+~~~
+
+=== Finer-grained customization
+
+Once prebuilt packages are installed, they will be picked by default by any new
+Rock bootstrap, i.e. rock will only build the packages that do __not__ have a
+prebuilt version.
+
+**This behaviour can be completely disabled** for a complete Rock bootstrap by
+setting the ROCK_NO_OSDEPS environment variable to 1 when bootstrapping, e.g.
+
+~~~
+ROCK_NO_OSDEPS=1 sh bootstrap.sh
+~~~
+
+**This behaviour can be disabled on a per-package basis** in a given Rock
+installation and add an osdeps override. For instance, to force autoproj to
+build the iodrivers_base from source, one would do:
+
+~~~
+Autoproj.add_source_overrides 'drivers/iodrivers_base', :force => true
+~~~
 
